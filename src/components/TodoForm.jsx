@@ -1,8 +1,12 @@
 import "./TodoForm.css";
-import {useState} from "react";
+import {useState, useRef} from "react";
 
 function TodoForm({addTodo}){
   const[text, setText] = useState("");
+
+  const inputRef = useRef();
+  
+  
 
   const onChangeText=(e)=>{
     setText(e.target.value);
@@ -15,12 +19,14 @@ function TodoForm({addTodo}){
       : addTodo(text);
     
     setText("");
+    inputRef.current.focus()
   }
 
   return (
     <form className ="TodoForm">
       <input 
-        value={text} 
+        value={text}
+        ref={inputRef} 
         onChange={onChangeText} 
         placeholder="새 할일 입력..."/>
       <button 
