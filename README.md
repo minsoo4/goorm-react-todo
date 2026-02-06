@@ -1,25 +1,21 @@
-실행방법
+##실행방법
 
 1. 라이브러리 설치
    1. nom install
 2. 서버 실행
    1. npm run dev
-   2. https://goorm-react-todo.vercel.app
-   3. http://localhost:3000/ 접속
+   2. http://localhost:3000/ 접속(로컬 서버)
+   3. https://goorm-react-todo.vercel.app(배포 서버)
 
-컴포넌트 구조
-App: 최상위 컴포넌트로 전체 할 일 데이터를 관리하고 추가, 수정, 삭제 함수를 하위로 전달합니다.
 
-Header: 앱의 제목이나 날짜 등 시각적인 정보를 보여주는 역할을 담당합니다.
+##컴포넌트 구조
 
-TodoForm: 사용자 입력을 받아 새로운 할 일을 생성하며, 빈 값 입력 시 예외 처리를 수행합니다.
-
-TodoList: 검색 기능을 포함하며, todos 데이터를 순회하여 개별 TodoItem을 화면에 렌더링합니다.
-
-TodoItem: 개별 할 일의 상태(완료 여부)를 표시하고, 체크박스 클릭이나 삭제 버튼 이벤트를 처리합니다.
-
-EmptyState: 할 일이 없을 때 안내 문구를 보여주거나, 현재 전체/완료 개수를 요약해서 보여줍니다.
-
+App - 전체 컴포넌트 구조 (추가, 수정, 삭제 함수)
+├── Header 
+├── TodoForm (input + submit) - 사용자 입력창
+└─── TodoList - TodoItem 렌더링 및 검색
+    ├── TodoItem (반복) 
+    └── EmptyState - 실시간 현황
 
 
 상태(state)
