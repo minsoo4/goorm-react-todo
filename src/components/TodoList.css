@@ -1,0 +1,7 @@
+.TodoList > input{
+  width: 100%;
+  padding: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}

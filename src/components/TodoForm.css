@@ -1,0 +1,19 @@
+.TodoForm{
+  display: flex;
+  gap : 20px;
+}
+
+.TodoForm input{
+  flex: 1;
+  padding : 15px;
+  
+  border : 1px solid rgb(220, 220, 220);
+  border-radius : 5px;
+}
+
+.TodoForm button{
+  cursor:pointer;
+  color : var(--text-sub);
+  width: 80px;
+  border:none;
+}

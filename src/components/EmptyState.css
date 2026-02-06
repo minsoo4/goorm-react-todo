@@ -1,0 +1,19 @@
+.EmptyState {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;           
+
+  width: 100%;                  
+  box-sizing: border-box;     
+  padding: 10px 20px;            
+
+  background-color: var(--Empty-color); 
+  border-radius: 5px;
+  margin-top: 12px;  
+}
+
+.EmptyState span {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--text-sub);
+}
