@@ -4,7 +4,8 @@
    1. nom install
 2. 서버 실행
    1. npm run dev
-   2. http://localhost:3000/ 접속
+   2. https://goorm-react-todo.vercel.app
+   3. http://localhost:3000/ 접속
 
 컴포넌트 구조
 App: 최상위 컴포넌트로 전체 할 일 데이터를 관리하고 추가, 수정, 삭제 함수를 하위로 전달합니다.
