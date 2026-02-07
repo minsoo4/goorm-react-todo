@@ -6,12 +6,13 @@ import TodoList from "./components/TodoList";
 
 
 function App() {
-  const [todos, setTodos] = useState([
+  const [todos, setTodos] = useState([ // 초기값
   { id: 1, text: '리액트 공부하기', completed: false },
   { id: 2, text: '점심 먹기', completed: false },
   { id: 3, text: '운동하기', completed: false },
 ]);
 
+// Todo 추가
   const addTodo = (text)=>{
     const newTodo={
       id : Date.now(),
@@ -19,8 +20,9 @@ function App() {
       completed : false,
     }
 
-    setTodos([newTodo, ...todos]);
+    setTodos([newTodo, ...todos]); //todos 기존 목록 유지
   }
+// Todo 상태 변경
   const updateTodo =(targetId)=>{
     setTodos(todos.map((todo)=>
       todo.id === targetId
@@ -28,7 +30,7 @@ function App() {
       :todo
     ))
   }
-
+// Todo 삭제
   const deleteTodo =(targetId)=>{
     setTodos(todos.filter((todo) => todo.id !== targetId));
   }

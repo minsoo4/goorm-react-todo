@@ -5,9 +5,9 @@ import {useState} from "react";
 
 
 function TodoList({todos, updateTodo, deleteTodo}){
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(""); // 검색어 상태
 
-  const onChangeSearch=(e)=>{
+  const onChangeSearch=(e)=>{ // 검색어 변경
     setSearch(e.target.value);
   };
 
@@ -16,7 +16,7 @@ function TodoList({todos, updateTodo, deleteTodo}){
     ? todos 
     : todos.filter((todo) => todo.text.includes(search));
 
-  const filterTodos = getFilterlist();
+  const filterTodos = getFilterlist(); // 필터링된 할 일 목록
 
   return (
     <div className="TodoList">

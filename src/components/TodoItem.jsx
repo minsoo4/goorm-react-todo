@@ -5,11 +5,11 @@ function TodoItem({id, text, completed, updateTodo, deleteTodo}){
   
   const onChangeCheckbox=()=>{
     updateTodo(id);
-  }
+  }// 체크박스 상태 변경 함수
 
   const onClickDelete=()=>{
     deleteTodo(id);
-  }
+  } // 삭제 버튼 클릭 함수
 
   return (
     <div className={`TodoItem ${completed ? "done" : ""}`}>
